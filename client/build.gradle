@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id "application"
+}
+
+group 'io.giovannymassuia.spring-webflux-vs-mvc.client'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+ext {
+    javaMainClass = "io.giovannymassuia.springwebfluxvsmvc.client.Main"
+}
+
+application {
+    mainClassName = javaMainClass
+}
